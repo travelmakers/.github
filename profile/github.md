@@ -33,17 +33,17 @@
 
 #### Rebase and Merge
 
-    ```
-    Commit 순서가 아닌 merge 순서대로 기록된다. 
-    그래서 하나의 PR에 담긴 commit message가 다른 PR의 commit message와 섞이지 않는다. 
-    그리고 rebase 덕분에 merge된 이후의 로그를 보았을 때 하나의 브랜치에서 연속적으로 작업한 것과 같은 로그를 확인할 수 있다. 
-    이 때문에 얼마든지 항상 원하는 수준으로 rollback 이 가능하다.
+```
+Commit 순서가 아닌 merge 순서대로 기록된다. 
+그래서 하나의 PR에 담긴 commit message가 다른 PR의 commit message와 섞이지 않는다. 
+그리고 rebase 덕분에 merge된 이후의 로그를 보았을 때 하나의 브랜치에서 연속적으로 작업한 것과 같은 로그를 확인할 수 있다. 
+이 때문에 얼마든지 항상 원하는 수준으로 rollback 이 가능하다.
 
-    잘 적용하기 위해서는 commit을 생성할 때부터 올바른 commit 단위로 분리해야 하며,
-    commit message 또한 설명력을 가지고 있어야 한다.
-    그리고 다른 PR이 먼저 merge되는 경우, rebase 작업이 필요할 수 있고
-    이 때 발생할 수 있는 conflict를 잘 해결할 수 있어야 한다.
-    ```
+잘 적용하기 위해서는 commit을 생성할 때부터 올바른 commit 단위로 분리해야 하며,
+commit message 또한 설명력을 가지고 있어야 한다.
+그리고 다른 PR이 먼저 merge되는 경우, rebase 작업이 필요할 수 있고
+이 때 발생할 수 있는 conflict를 잘 해결할 수 있어야 한다.
+```
 
 ### 규칙
 
@@ -73,13 +73,12 @@ WEB-49
 - 추가적으로 알리고 싶은 내용
 - TODO / 고민 중인 내용
 - 배포 체크리스트
-    - [ ] PR 이름 확인
-    - Jira Issue 타이틀과 일치
-    - ex) API-1/큐레이터 페이지 기능 개선
+    - [ ]  PR 이름 확인
+        - 지라 이슈명과 유사/일치
+        - ex) [Feature] 결제 취소 시 주문 상태 변경 로직 자동화
+    - [ ]  본인 Assign 지정
+    - [ ]  다른 개발자 reviewer 지정
 ```
-
-- 본인 Assign 지정
-- 다른 개발자 reviewer 지정
 
 ### 리뷰어 룰
 
