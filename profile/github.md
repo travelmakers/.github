@@ -24,6 +24,8 @@
 - ex) API-1/curator
 - ex) ADM-23/master-table
 - ex) API-3/hotfix/curator
+- ex) releases/0.0.1
+- ex) ADM-24/hotfix/login-error
 
 ## 2. 커밋 룰
 
