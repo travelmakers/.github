@@ -11,6 +11,8 @@ commitlint는 커밋 메시지에 대해서 lint를 할 수 있게 해주는 툴
 이때 필요한 툴이 commitlint 입니다. 설치 방법은 다음과 같습니다.
 
 ```bash
+npm install husky --save-dev
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit'
 npm install --save-dev @commitlint/cli @commitlint/config-conventional
 ```
 
@@ -22,6 +24,7 @@ package.json 수정사항은 다음과 같습니다.
 // ...생략
 "scripts": {
   // ...생략
+  "prepare": "husky install",
   "commitlint": "commitlint -e",
   // ...생략
 },
@@ -34,7 +37,17 @@ package.json 수정사항은 다음과 같습니다.
 // ...생략
 ```
 
-여기까지 설정했다면, 이제부터는 git commit 시 .git/COMMIT_EDITMSG 파일에 커밋 메시지가 규격에 맞지 않게 작성된 경우 다음과 같이 오류가 발생하게 됩니다. (참고: -e 옵션에 값을 주면 다른 경로를 지정할 수 있습니다.)
+.commitlintrc.json 파일을 생성한다.
+```json
+{
+    "extends": ["@commitlint/config-conventional"],
+    "rules": {
+        "type-enum": [2, "always", ["ci", "chore", "docs", "feat", "fix", "perf", "refactor", "revert", "style"]]
+    }
+}
+```
+
+여기까지 설정했다면, 이제부터는 git commit 시 커밋 메시지가 규격에 맞지 않게 작성된 경우 다음과 같이 오류가 발생하게 됩니다.
 
 ```bash
 ❯ git commit -m "foo: bar"
