@@ -40,11 +40,33 @@ package.json 수정사항은 다음과 같습니다.
 .commitlintrc.json 파일을 생성한다.
 ```json
 {
-    "extends": ["@commitlint/config-conventional"],
+    "extends": ["@commitlint/config-angular"],
     "rules": {
-        "type-enum": [2, "always", ["ci", "chore", "docs", "feat", "fix", "perf", "refactor", "revert", "style"]]
+      "subject-case": [
+        2,
+        "always",
+        ["sentence-case", "start-case", "pascal-case", "upper-case", "lower-case"]
+      ],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "build",
+          "chore",
+          "ci",
+          "docs",
+          "feat",
+          "fix",
+          "perf",
+          "refactor",
+          "revert",
+          "style",
+          "test",
+          "sample"
+        ]
+      ]
     }
-}
+  }
 ```
 
 여기까지 설정했다면, 이제부터는 git commit 시 커밋 메시지가 규격에 맞지 않게 작성된 경우 다음과 같이 오류가 발생하게 됩니다.
