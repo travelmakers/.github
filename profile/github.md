@@ -22,11 +22,11 @@
 
 - 지라 이슈에 따라 생성
   - 핫픽스의 경우에도 지라 이슈를 우선시 하는 것을 목표로 하며 모든 브랜치는 지라 이슈 코드를 가져가도록 함
-- ex) API-1/curator
-- ex) ADM-23/master-table
-- ex) API-3/hotfix/curator
+- ex) feat/API-1-curator
+- ex) feat/ADM-23-master-table
+- ex) hotfix/API-3-curator
 - ex) releases/0.0.1
-- ex) ADM-24/hotfix/login-error
+- ex) hotfix/ADM-24-login-error
 
 ## 2. 커밋 룰
 
