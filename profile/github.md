@@ -97,23 +97,23 @@ WEB-49
 
 ### PR 네이밍 룰
 
-- [Feature] 결제 취소 시 주문 상태 변경 로직 자동화
+- feat(subject): 결제 취소 시 주문 상태 변경 로직 자동화
 
     → 타임라인, 티켓 등을 통해 작업하는 대부분의 내용은 여기에 해당
 
-- [Fix] 주문 상태 변경 시 null exception 오류 해결
+- fix(subject): 주문 상태 변경 시 null exception 오류 해결
 
     → 배포 후 발생한 오류 수정 시 해당
 
-- [Refactor] 주문 상태 변경 로직 리팩토링
+- refactor: 주문 상태 변경 로직 리팩토링
 
     → 리팩토링 티켓 처리 시 해당
 
-- [Chore] php-fpm access log disable 처리
+- chore: php-fpm access log disable 처리
 
     → 지라 티켓과는 상관없이 진행된 기타 변경사항 해당
 
-- [Release] 1.1.0
+- release: 1.1.0
 
     → release -> 운영배포시 해당
 
